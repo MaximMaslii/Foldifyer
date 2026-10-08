@@ -1,0 +1,29 @@
+{
+  "name": "foldifyer-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "legal": "tsx scripts/legal.ts",
+    "figtest": "tsx scripts/fig-test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1145.0",
+    "@hono/node-server": "^1.19.17",
+    "hono": "^4.13.12",
+    "jose": "^6.2.12",
+    "mongodb": "^7.7.0",
+    "tsx": "^4.23.15",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "typescript": "^5.9.3"
+  }
+}

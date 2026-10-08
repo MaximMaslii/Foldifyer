@@ -1,0 +1,33 @@
+﻿App name (max 30): Foldifyer: Papierfiguren
+Subtitle (max 30): Dein Foto als Bastelfigur
+Promotional text (max 170): Neu diesen Monat: die Halloween-Kollektion mit Hexenhut, kleinem Gespenst und gruseliger Szene für deine Figuren.
+Keywords (max 100, comma-separated, no spaces): papierfigur,basteln,bastelbogen,katze,hund,haustier,ausdrucken,kinder,diy,origami,geschenk,familie
+
+Description (max 4000):
+Foldifyer macht aus einem Foto deiner Katze, deines Hundes oder deiner Familie eine Papierfigur, die du zu Hause ausdruckst.
+
+SO GEHT'S
+1. Mach ein Foto von deinem Haustier oder einer Person.
+2. Druck den Bogen auf einem normalen Drucker aus, auf Normal- oder Karton.
+3. Ausschneiden, falten, kleben. Die App zeichnet den Bastelbogen selbst, darum passt jedes Teil.
+
+DAS KANNST DU MACHEN
+• Haustiere und Menschen: Katzen, Hunde, jedes Tier, Kinder, Eltern, Großeltern
+• Outfits für jede Jahreszeit: Partyhüte, Kronen, Weihnachtsmützen und mehr
+• Schritt-für-Schritt-Anleitung mit Bild für jedes Teil
+• Drei Schwierigkeitsstufen und eine Ausmalversion für Kinder
+• Dein Regal: die ganze Figurenfamilie an einem Ort
+• Set drucken: die ganze Familie zusammen, mit Haus oder Hundehütte
+• Karten und Geschenkboxen mit deiner Figur
+• Teile ein Bild deiner Figur mit Freunden
+
+FOLDIFYER CLUB
+Jeden Monat eine neue Kollektion (Outfits, Sticker und eine Szene), neue Figuren jeden Monat, alle Sticker, Geschenkboxen und Häuser.
+Der Club ist ein Abo mit automatischer Verlängerung. Die Zahlung erfolgt über deine Apple-ID oder dein Google-Play-Konto. Es verlängert sich automatisch, wenn du nicht spätestens 24 Stunden vor Ende des Zeitraums kündigst. Verwalten und kündigen kannst du es in deinen Kontoeinstellungen.
+
+Du kannst auch ohne Abo Figurenpakete einmalig kaufen. Die erste Figur ist kostenlos.
+
+Dein Foto wird einmal zum Zeichnen der Figur verwendet und nicht auf unserem Server gespeichert. Die Gesichter zeichnet eine KI: ein Abbild, keine exakte Kopie.
+
+Datenschutzerklärung: [PRIVACY URL]
+Nutzungsbedingungen: [TERMS URL]

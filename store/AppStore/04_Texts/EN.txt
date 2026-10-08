@@ -1,0 +1,33 @@
+﻿App name (max 30): Foldifyer: Pet Paper Toys
+Subtitle (max 30): Your photo as a papercraft
+Promotional text (max 170): New this month: the Halloween collection with a witch hat, a little ghost and a spooky scene for your paper figures.
+Keywords (max 100, comma-separated, no spaces): papercraft,paper toy,pet,cat,dog,printable,craft,kids,diy,origami,family,gift,cube,figure
+
+Description (max 4000):
+Foldifyer turns a photo of your cat, dog or anyone in your family into a paper toy you can print at home.
+
+HOW IT WORKS
+1. Take a photo of your pet or a person.
+2. Print the sheet on a home printer, on plain or thick paper.
+3. Cut, fold and glue. The app draws the template itself, so every part fits.
+
+WHAT YOU CAN DO
+• Pets and people: cats, dogs, any animal, kids, parents, grandparents
+• Outfits for every season: party hats, crowns, Santa hats and more
+• Step-by-step building guide with a picture for every part
+• Three difficulty levels and a colouring-page version for kids
+• Your shelf: keep the whole family of figures in one place
+• Print a set: the whole family together, with a house or a kennel for each
+• Cards and gift boxes with your figure on them
+• Share a picture of your figure with friends
+
+FOLDIFYER CLUB
+A new themed collection every month (outfits, stickers and a scene), new figures each month, all stickers, gift boxes and houses.
+The Club is an auto-renewing subscription. Payment is charged to your Apple ID or Google Play account. It renews automatically unless cancelled at least 24 hours before the end of the period. You can manage or cancel it in your account settings.
+
+You can also buy figure packs once, without a subscription. Your first figure is free.
+
+Your photo is used once to draw the figure and is not stored on our server. The printed faces are drawn by AI and are a likeness, not an exact copy.
+
+Privacy Policy: [PRIVACY URL]
+Terms of Use: [TERMS URL]

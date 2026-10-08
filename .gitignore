@@ -1,0 +1,46 @@
+# Secrets: never send to GitHub
+.env
+.env.*
+!.env.example
+
+node_modules/
+.expo/
+dist/
+*.log
+
+# Your own test photos and results
+test/*
+!test/README.txt
+
+# Local build scripts
+build-apk.bat
+build-apk-real.bat
+create-env.bat
+test-figure.bat
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Expo
+.expo/
+dist/
+
+# IDE
+.vscode/
+.idea/
