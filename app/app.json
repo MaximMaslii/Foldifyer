@@ -8,7 +8,7 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "bundleIdentifier": "com.foldifyer.app",
+      "bundleIdentifier": "com.maslii.foldifyer",
       "supportsTablet": false,
       "infoPlist": {
         "NSCameraUsageDescription": "Foldifyer uses the camera to photograph your pet or a person for a paper figure, and your finished toy.",
@@ -19,7 +19,7 @@
     "android": {
       "package": "com.foldifyer.app",
       "adaptiveIcon": {
-        "backgroundColor": "#F3E3CC",
+        "backgroundColor": "#FAF0DC",
         "foregroundImage": "./assets/android-icon-foreground.png"
       },
       "permissions": [

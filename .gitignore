@@ -44,3 +44,10 @@ dist/
 # IDE
 .vscode/
 .idea/
+# Apple signing keys and certificates - never upload
+apple-dev-cert/
+*.key
+*.p12
+*.cer
+*.csr
+*.pem
