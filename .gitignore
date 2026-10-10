@@ -51,3 +51,7 @@ apple-dev-cert/
 *.cer
 *.csr
 *.pem
+
+Keys.txt
+AuthKey_*.p8
+SubscriptionKey_*.p8
