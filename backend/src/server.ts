@@ -87,8 +87,9 @@ app.use("/v1/*", async (c, next) => {
 const month = () => new Date().toISOString().slice(0, 7);
 const clubLeftOf = (d: DeviceDoc) => Math.max(0, env.clubFigs - (d.clubMonth === month() ? d.clubUsed ?? 0 : 0));
 const meOf = async (d: DeviceDoc, fresh = false) => {
-  const club = await isClub(d._id, fresh);
-  return { deviceId: d._id, plus: env.devAllPro, club, clubLeft: club ? clubLeftOf(d) : 0, credits: d.credits ?? 0, freeLeft: Math.max(0, env.freeFigs - d.used) };
+  // `club` = everything unlocked: any pack bought (or an old Club subscription, or the test switch).
+  const club = env.devAllPro || !!d.unlocked || (await isClub(d._id, fresh));
+  return { deviceId: d._id, plus: env.devAllPro, club, clubLeft: 0, credits: d.credits ?? 0, freeLeft: Math.max(0, env.freeFigs - d.used) };
 };
 app.get("/v1/me", async (c) => c.json(await meOf(c.get("device"), c.req.query("fresh") === "1")));
 
@@ -98,9 +99,10 @@ app.post("/v1/credits/sync", async (c) => {
   if (limited(`sync:${d._id}`, 30, 3600)) return fail(c, 429, "rate_limited");
   try {
     for (const [tx, product] of await packPurchases(d._id)) {
-      const n = env.packs[product];
+      // Known ids first; otherwise the number in the id ("…5pics", "…pack10").
+      const n = env.packs[product] ?? Number(/(\d+)\s*pics|pack(\d+)/i.exec(product)?.slice(1).find(Boolean) ?? 0);
       if (!n) continue;
-      const upd = await devices().findOneAndUpdate({ _id: d._id, rcSeen: { $ne: tx } }, { $push: { rcSeen: tx }, $inc: { credits: n } }, { returnDocument: "after" });
+      const upd = await devices().findOneAndUpdate({ _id: d._id, rcSeen: { $ne: tx } }, { $push: { rcSeen: tx }, $inc: { credits: n }, $set: { unlocked: true } }, { returnDocument: "after" });
       if (upd) d = upd;
     }
   } catch (e) { console.error("credits sync", (e as Error).message); return fail(c, 503, "store_unavailable"); }
@@ -117,13 +119,9 @@ app.post("/v1/figs", async (c) => {
   const plus = env.devAllPro;
   if (limited(`fig:${d._id}`, env.perDay, 86400)) return fail(c, 429, "daily_limit");
 
-  // Pay first (free figure → pack → nothing left); a failed figure is given back.
-  // Order: this month's Club figures → the free figure → figures from packs.
+  // Pay first (free figures → figures from packs → nothing left); a failed figure is given back.
   let paidWith: "plus" | "club" | "free" | "credit";
-  const m = month(), club = !plus && (await isClub(d._id));
   if (plus) paidWith = "plus";
-  else if (club && (await devices().findOneAndUpdate({ _id: d._id, clubMonth: m, clubUsed: { $lt: env.clubFigs } }, { $inc: { clubUsed: 1 } }))) paidWith = "club";
-  else if (club && (await devices().findOneAndUpdate({ _id: d._id, clubMonth: { $ne: m } }, { $set: { clubMonth: m, clubUsed: 1 } }))) paidWith = "club";
   else if (await devices().findOneAndUpdate({ _id: d._id, used: { $lt: env.freeFigs } }, { $inc: { used: 1 } })) paidWith = "free";
   else if (await devices().findOneAndUpdate({ _id: d._id, credits: { $gt: 0 } }, { $inc: { credits: -1 } })) paidWith = "credit";
   else return fail(c, 402, "paywall");
@@ -167,8 +165,10 @@ app.put("/v1/figs/:id", async (c) => {
   const set: Partial<FigDoc> = {};
   if (typeof body.name === "string") set.name = body.name.trim().slice(0, 24);
   const outfit = OUTFITS.find((o) => o === body.outfit), level = LEVELS.find((l) => l === body.level);
-  const club = await isClub(c.get("device")._id);
-  if (outfit && (club || FREE_OUTFITS.includes(outfit))) set.outfit = outfit;
+  const dev = c.get("device");
+  // Outfits and stickers open with the first pack; before that only the plain figure ("none").
+  const club = env.devAllPro || !!dev.unlocked || (await isClub(dev._id));
+  if (outfit && (club || outfit === "none")) set.outfit = outfit;
   if (level) set.level = level;
   if (Array.isArray(body.stickers) && club) set.stickers = STICKERS.filter((s) => (body.stickers as unknown[]).includes(s));
   const f = await figs().findOneAndUpdate({ _id: c.req.param("id"), deviceId: c.get("device")._id }, { $set: set }, { returnDocument: "after" });

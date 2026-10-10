@@ -9,7 +9,7 @@ const state: State = { figs: [], used: 0, credits: 0, club: false, clubUsed: 0, 
 const KEY = "pp_demo_state";
 const loaded: Promise<void> = AsyncStorage.getItem(KEY).then((v) => { if (v) Object.assign(state, JSON.parse(v) as State); }).catch(() => {});
 const save = () => { AsyncStorage.setItem(KEY, JSON.stringify(state)).catch(() => {}); };
-const me = (): Me => ({ deviceId: "demo-device", plus: false, club: state.club, clubLeft: state.club ? Math.max(0, 5 - state.clubUsed) : 0, credits: state.credits, freeLeft: Math.max(0, 1 - state.used) });
+const me = (): Me => ({ deviceId: "demo-device", plus: false, club: state.club, clubLeft: 0, credits: state.credits, freeLeft: Math.max(0, 2 - state.used) });
 const PETS = ["cat", "dog", "greycat"], PEOPLE = ["girl", "boy"];
 const find = (id: string) => { const f = state.figs.find((x) => x.id === id); if (!f) throw new ApiError(404, "not_found"); return f; };
 
@@ -17,11 +17,11 @@ export const demoApi = {
   me: async () => { await loaded; return me(); },
   syncCredits: async () => me(),
   /** Stands in for a purchase in the demo. */
-  grant: (what: "pack3" | "pack10" | "month" | "year") => { if (what === "month" || what === "year") state.club = true; else state.credits += what === "pack3" ? 3 : 10; save(); },
+  grant: (what: "pack5" | "pack10") => { state.club = true; state.credits += what === "pack5" ? 5 : 10; save(); },
   createFig: async (body: { photo: string; kind: Kind; name: string }) => {
     await loaded;
     let free = false;
-    { if (state.club && state.clubUsed < 5) state.clubUsed++; else if (state.used < 1) { state.used++; free = true; } else if (state.credits > 0) state.credits--; else throw new ApiError(402, "paywall"); }
+    { if (state.used < 2) { state.used++; free = true; } else if (state.credits > 0) state.credits--; else throw new ApiError(402, "paywall"); }
     const list = body.kind === "pet" ? PETS : PEOPLE, n = state.figs.filter((f) => f.kind === body.kind).length;
     const fig: Fig = { id: `d${++state.seq}`, createdAt: new Date().toISOString(), status: "generating", kind: body.kind, name: body.name, preset: list[n % list.length], outfit: "none", level: "normal", free };
     state.figs.unshift(fig); save();

@@ -22,13 +22,17 @@
         "buildType": "apk"
       },
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://YOUR-PAPLET-API.up.railway.app"
+        "EXPO_PUBLIC_API_URL": "https://foldifyer-production.up.railway.app",
+        "EXPO_PUBLIC_RC_ANDROID_KEY": "goog_PASTE_PUBLIC_ANDROID_KEY",
+        "EXPO_PUBLIC_RC_IOS_KEY": "appl_DGwSKsUUKtqDQNneFOxqHQqEcVj"
       }
     },
     "production": {
       "autoIncrement": true,
       "env": {
-        "EXPO_PUBLIC_API_URL": "https://YOUR-PAPLET-API.up.railway.app"
+        "EXPO_PUBLIC_API_URL": "https://foldifyer-production.up.railway.app",
+        "EXPO_PUBLIC_RC_ANDROID_KEY": "goog_PASTE_PUBLIC_ANDROID_KEY",
+        "EXPO_PUBLIC_RC_IOS_KEY": "appl_DGwSKsUUKtqDQNneFOxqHQqEcVj"
       }
     }
   },

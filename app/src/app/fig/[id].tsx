@@ -58,7 +58,7 @@ export default function FigScreen() {
         <SectionTitle>{t("outfitTitle")}</SectionTitle>
         <Grid min={76} gap={S.sm}>
           {outfits.map((o) => {
-            const on = fig.outfit === o, locked = CLUB_OUTFITS.includes(o) && !me?.club, fresh = col.outfits.includes(o);
+            const on = fig.outfit === o, locked = o !== "none" && !me?.club, fresh = col.outfits.includes(o);
             return (
               <Pressable key={o} onPress={() => (locked ? router.push("/packs") : change(fig.id, { outfit: o }))} accessibilityRole="radio" accessibilityState={{ checked: on, disabled: locked }} accessibilityLabel={t(`o_${o}` as keyof Strings)}
                 style={{ alignItems: "center", backgroundColor: c.card, borderRadius: R.lg, borderWidth: 2.5, borderColor: on ? c.primary : c.line, padding: 6, gap: 2 }}>

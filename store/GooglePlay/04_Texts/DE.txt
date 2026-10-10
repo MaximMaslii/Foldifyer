@@ -1,4 +1,4 @@
-﻿App name (max 30): Foldifyer: Papierfiguren
+App name (max 30): Foldifyer: Papierfiguren
 Short description (max 80): Aus einem Foto von Haustier oder Familie wird eine Papierfigur zum Ausdrucken.
 
 Full description (max 4000):
@@ -19,13 +19,11 @@ DAS KANNST DU MACHEN
 • Karten und Geschenkboxen mit deiner Figur
 • Teile ein Bild deiner Figur mit Freunden
 
-FOLDIFYER CLUB
-Jeden Monat eine neue Kollektion (Outfits, Sticker und eine Szene), neue Figuren jeden Monat, alle Sticker, Geschenkboxen und Häuser.
-Der Club ist ein Abo mit automatischer Verlängerung. Die Zahlung erfolgt über deine Apple-ID oder dein Google-Play-Konto. Es verlängert sich automatisch, wenn du nicht spätestens 24 Stunden vor Ende des Zeitraums kündigst. Verwalten und kündigen kannst du es in deinen Kontoeinstellungen.
-
-Du kannst auch ohne Abo Figurenpakete einmalig kaufen. Die erste Figur ist kostenlos.
+GRATIS STARTEN, KEIN ABO
+Deine ersten 2 Figuren sind gratis.
+Mehr gewünscht? Kaufe einmalig ein Paket mit 5 oder 10 Figuren. Jedes Paket schaltet außerdem alle Outfits, Gesichts-Sticker, Geschenkschachteln, Häuschen, Szenen zum Drucken und jede neue Monatskollektion frei – für immer. Kein Abo, keine Verlängerung, Figuren verfallen nicht.
 
 Dein Foto wird einmal zum Zeichnen der Figur verwendet und nicht auf unserem Server gespeichert. Die Gesichter zeichnet eine KI: ein Abbild, keine exakte Kopie.
 
-Datenschutzerklärung: [PRIVACY URL]
-Nutzungsbedingungen: [TERMS URL]
+Datenschutzerklärung: https://docs.google.com/document/d/1PHBUwHeVwRkJoMIw-vh5z8UaT2No4or_-eXXpsd_l9s
+Nutzungsbedingungen: https://docs.google.com/document/d/1-phaDjgy9yHOsrQla0WAErohJMma20An7zRo4rnr8Iw

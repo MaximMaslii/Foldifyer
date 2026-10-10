@@ -2,11 +2,12 @@
 // Careful templates written to match what the app really does. Have a lawyer review them before launch.
 // `npm run legal` writes the same pages as static files into ../store/ so they can be hosted anywhere.
 
-const NAME = process.env.LEGAL_NAME || "[YOUR FULL NAME]";
+const NAME = process.env.LEGAL_NAME || "Maxim Maslii";
 const PLACE = process.env.LEGAL_ADDRESS || "Chișinău, Republic of Moldova";
-const SUPPORT = process.env.SUPPORT_EMAIL || "[YOUR SUPPORT EMAIL]";
+const SUPPORT = process.env.SUPPORT_EMAIL || "maxim.maslii777@gmail.com";
 const UPDATED = "October 6, 2026";
-const CLUB = process.env.LEGAL_PRICE_CLUB || "US$3.99 per month or US$24.99 per year";
+const PACKS = process.env.LEGAL_PRICE_PACKS || "5 figures for US$2.99, 10 figures for US$4.99";
+const FREE = process.env.FREE_FIGURES || "2";
 
 type Block = string | string[]; // paragraph, or a bullet list
 type Doc = { title: string; intro: string; sections: [string, Block[]][] };
@@ -26,7 +27,7 @@ const privacy: Doc = {
       "The photo. When you make a figure, the app sends the photo you chose over an encrypted connection to our server, which passes it to our AI provider, Google (Gemini API), to (a) check that the photo is suitable and (b) draw the printed surfaces of the paper toy. Our server holds the photo in memory for the duration of that request and does not write it to storage.",
       "Figures. The picture generated for each figure (a stylised face and surface textures), a few colour values, the name you typed, the chosen outfit and difficulty. Kept until you delete the figure or all data.",
       "Photos of finished toys. If you photograph your assembled toy to share it, that photo stays on your phone and goes only where you choose to share it. It is not sent to us.",
-      "Purchases. Payments are processed by Apple or Google. We receive from our purchase provider (RevenueCat) only which products your device identifier bought and whether the subscription is active. We never see your card or billing details.",
+      "Purchases. Payments are processed by Apple or Google. We receive from our purchase provider (RevenueCat) only which products your device identifier bought. We never see your card or billing details.",
       "Technical data. Our hosting provider and server process your IP address and standard request information to deliver the service and to limit abuse. We do not use it to identify you or to build a profile.",
     ]],
     ["3. What we do not do", [[
@@ -39,7 +40,7 @@ const privacy: Doc = {
       "To provide the service you ask for — making, storing and showing your figures (performance of a contract, GDPR Art. 6(1)(b)).",
       "Photos of people: we ask for your explicit consent in the app before a photo is sent for processing (GDPR Art. 6(1)(a)). You can withdraw it at any time by deleting the figure.",
       "To keep the service safe and lawful — checking that a photo is suitable, rate limiting, preventing misuse (legitimate interests, GDPR Art. 6(1)(f), and legal obligations).",
-      "To manage purchases and the free figure (performance of a contract).",
+      "To manage purchases and the free figures (performance of a contract).",
     ]],
     ["5. Who processes data for us", [
       "We use the following service providers, each only for the purpose stated:",
@@ -48,7 +49,7 @@ const privacy: Doc = {
         "Railway (United States) — application hosting.",
         "MongoDB Atlas — database for your device record and figures.",
         "Cloudflare R2 — storage of generated pictures (when enabled).",
-        "RevenueCat, Apple and Google — purchases and subscription status.",
+        "RevenueCat, Apple and Google — purchases.",
       ],
       "These providers may process data outside your country, including in the United States. Where required, transfers rely on the European Commission's Standard Contractual Clauses or an equivalent mechanism. We may disclose data if the law requires it.",
     ]],
@@ -100,23 +101,22 @@ const terms: Doc = {
     ["4. AI-generated pictures and your templates", [
       "The figures are created for your personal, non-commercial use: printing at home, gifts, crafts with family, a classroom. You can report a picture that is offensive or wrong using “Report this picture” on the figure's screen, and we will review it.",
     ]],
-    ["5. Free figure, packs and the Foldifyer Club", [
-      "A new user can make one figure for free; its printed sheet carries the app's name. Further figures need a pack or the Club.",
+    ["5. Free figures and figure packs", [
+      `A new user can make ${FREE} figures for free. Free figures print with the app's name, and outfits, stickers, gift boxes, little houses and scenes stay locked.`,
       [
-        "Packs (for example 3 or 10 figures) are one-time purchases. Figures from a pack do not expire. A figure that fails to generate is not counted.",
-        `The Foldifyer Club is a subscription (${CLUB}). While it is active it includes a number of new figures each calendar month (shown in the app; unused ones do not carry over), the monthly collection of outfits, stickers and a scene, all stickers, gift boxes and houses.`,
+        `Figure packs are one-time purchases (${PACKS}). There is no subscription and nothing renews.`,
+        "Buying any pack adds its figures to your device and permanently unlocks all outfits, stickers, gift boxes, little houses and scenes, including ones added later, for every figure you make.",
+        "Figures from a pack do not expire. A figure that fails to generate is not counted.",
         "Prices can differ by country and include applicable taxes; the price shown in the app at the time of purchase applies. Payment is charged to your Apple ID or Google Play account when you confirm the purchase.",
-        "The subscription renews automatically for the same period and price unless you cancel at least 24 hours before the end of the current period. You can manage or cancel it at any time in your App Store or Google Play account settings. Deleting the app does not cancel a subscription.",
-        "After cancelling you keep the Club until the end of the period already paid for. Figures you have made stay yours; Club outfits and stickers can no longer be changed on them after the Club ends.",
         "Purchases are linked to the app installation on your device and can be restored with “Restore purchases”. Refunds are handled by Apple or Google under their policies; statutory consumer rights are not affected.",
       ],
-      "We may change prices for future periods; you will be told in advance by the store and can cancel before the change applies.",
+      "We may change prices for future purchases. Purchases you have already made are not affected.",
     ]],
     ["6. Our rights", [
       "The app, its design, template shapes, texts and software belong to us or our licensors. We grant you a personal, non-exclusive, non-transferable, revocable licence to use the app on devices you own or control, under these terms and the store's usage rules.",
     ]],
     ["7. Availability and changes", [
-      "We try to keep the service running but do not promise it will always be available or error-free. We may change or discontinue features. If we discontinue the paid service, unused paid figures or the unused part of a subscription will be refunded where the law requires it.",
+      "We try to keep the service running but do not promise it will always be available or error-free. We may change or discontinue features. If we discontinue the paid service, unused paid figures will be refunded where the law requires it.",
     ]],
     ["8. Disclaimer and liability", [
       "The app is provided “as is”. To the extent the law allows, we give no warranties about how closely a figure resembles the photo or how a printed toy turns out, and we are not liable for paper, ink or other materials used, or for indirect or consequential loss. Take care with scissors, craft knives and glue. Our total liability to you for any claim is limited to the amount you paid for the app in the 12 months before the claim. Nothing in these terms limits liability that cannot be limited by law, or the rights you have as a consumer in your country.",
@@ -146,7 +146,7 @@ const del: Doc = {
       `Email ${SUPPORT} and ask for deletion. If you still know your device identifier (shown in More), include it. Records of devices that have not been used for 24 months are deleted automatically.`,
     ]],
     ["What may be kept", [
-      "A record of how many figures the device has used and bought (so the free figure cannot be refilled). Our AI provider may hold request data for a limited period (up to 55 days) for abuse monitoring before deleting it.",
+      "A record of how many figures the device has used and bought (so the free figures cannot be refilled). Our AI provider may hold request data for a limited period (up to 55 days) for abuse monitoring before deleting it.",
     ]],
   ],
 };

@@ -19,10 +19,10 @@ export const env = {
   devAllPro: process.env.DEV_ALL_PRO === "true",
   publicUrl: (process.env.PUBLIC_URL || "").replace(/\/$/, ""),
   /** Figures a new device can make for free. */
-  freeFigs: Number(process.env.FREE_FIGURES || 1),
+  freeFigs: Number(process.env.FREE_FIGURES || 2),
   perDay: Number(process.env.FIGURES_PER_DAY || 20),
   /** How many figures each one-time pack adds (RevenueCat product id → figures). */
-  packs: { foldifyer_pack3: 3, foldifyer_pack10: 10 } as Record<string, number>,
+  packs: { "com.foldifyer.5pics": 5, "com.foldifyer.10pics": 10, foldifyer_pack5: 5, foldifyer_pack10: 10, foldifyer_pack3: 3 } as Record<string, number>,
   /** RevenueCat entitlement of the Club subscription, and how many figures it includes each calendar month. */
   clubEntitlement: process.env.REVENUECAT_ENTITLEMENT || "club",
   clubFigs: Number(process.env.CLUB_FIGURES_PER_MONTH || 5),

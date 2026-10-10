@@ -11,6 +11,7 @@ import { FigView } from "@/components/FigView";
 import { Steps } from "@/components/Steps";
 import { SvgView } from "@/components/SvgView";
 import { currentCollection, sceneArt } from "@/lib/club";
+import { UnlockCard } from "@/components/UnlockCard";
 import type { Kind } from "@/lib/types";
 
 export default function Make() {
@@ -18,7 +19,6 @@ export default function Make() {
   const { t } = useI18n();
   const { me, figs } = useSession();
   const col = currentCollection();
-  const left = !me ? "" : me.plus ? t("leftPlus") : me.clubLeft + me.credits > 0 ? t("leftN", { n: me.clubLeft + me.credits + me.freeLeft }) : me.freeLeft > 0 ? t("leftFree") : t("leftNone");
   // Example photos: the small picture in the corner is the photo, the big one is the finished paper toy.
   const EXAMPLE = { pet: require("../../../assets/example-pet.jpg"), person: require("../../../assets/example-person.jpg") };
   const Choice = ({ kind, title, sub }: { kind: Kind; title: string; sub: string }) => (
@@ -38,14 +38,7 @@ export default function Make() {
           <Choice kind="pet" title={t("pet")} sub={t("petSub")} />
           <Choice kind="person" title={t("person")} sub={t("personSub")} />
         </View>
-        <Pressable onPress={() => router.push("/packs")} accessibilityRole="button" style={{ flexDirection: "row", alignItems: "center", gap: S.md, backgroundColor: c.card2, borderRadius: R.lg, padding: S.lg, minHeight: 56 }}>
-          <Ionicons name="gift-outline" size={22} color={c.accent} />
-          <View style={{ flex: 1 }}>
-            <Text style={{ color: c.ink, fontWeight: "700", fontSize: F.md }}>{left}</Text>
-            {me?.plus ? null : <Text style={{ color: c.accent, fontWeight: "800", fontSize: F.sm }}>{t("getMore")}</Text>}
-          </View>
-          {me?.plus ? null : <Ionicons name="chevron-forward" size={18} color={c.muted} />}
-        </Pressable>
+        <UnlockCard />
         <Pressable onPress={() => router.push("/club")} accessibilityRole="button" accessibilityLabel={t("colMonth")} style={({ pressed }) => ({ borderRadius: R.xl, overflow: "hidden", backgroundColor: c.card, borderWidth: 2, borderColor: c.line, opacity: pressed ? 0.85 : 1 })}>
           <View style={{ height: 120 }}>
             <SvgView xml={`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 300 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">${sceneArt(col.id)}</svg>`} style={{ flex: 1 }} />

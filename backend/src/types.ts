@@ -42,6 +42,8 @@ export type DeviceDoc = {
   used: number;
   /** paid figures left */
   credits: number;
+  /** true after the first pack: every outfit, sticker, gift box, house and scene is open for good */
+  unlocked?: boolean;
   /** Club figures used in the calendar month `clubMonth` ("2026-10") */
   clubMonth?: string;
   clubUsed?: number;

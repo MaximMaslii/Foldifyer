@@ -1,6 +1,6 @@
-﻿App name (max 30): Foldifyer: Pet Paper Toys
+App name (max 30): Foldifyer: Pet Paper Toys
 Subtitle (max 30): Your photo as a papercraft
-Promotional text (max 170): New this month: the Halloween collection with a witch hat, a little ghost and a spooky scene for your paper figures.
+Promotional text (max 170): 2 figures free. Packs of 5 or 10 unlock every outfit, sticker and scene for good — no subscription.
 Keywords (max 100, comma-separated, no spaces): papercraft,paper toy,pet,cat,dog,printable,craft,kids,diy,origami,family,gift,cube,figure
 
 Description (max 4000):
@@ -21,13 +21,11 @@ WHAT YOU CAN DO
 • Cards and gift boxes with your figure on them
 • Share a picture of your figure with friends
 
-FOLDIFYER CLUB
-A new themed collection every month (outfits, stickers and a scene), new figures each month, all stickers, gift boxes and houses.
-The Club is an auto-renewing subscription. Payment is charged to your Apple ID or Google Play account. It renews automatically unless cancelled at least 24 hours before the end of the period. You can manage or cancel it in your account settings.
-
-You can also buy figure packs once, without a subscription. Your first figure is free.
+FREE TO START, NO SUBSCRIPTION
+Your first 2 figures are free.
+Need more? Buy a pack once: 5 figures or 10 figures. Any pack also unlocks all outfits, face stickers, gift boxes, little houses, printable scenes and every new monthly collection — for good. No subscription, nothing renews, and figures never expire.
 
 Your photo is used once to draw the figure and is not stored on our server. The printed faces are drawn by AI and are a likeness, not an exact copy.
 
-Privacy Policy: [PRIVACY URL]
-Terms of Use: [TERMS URL]
+Privacy Policy: https://docs.google.com/document/d/1PHBUwHeVwRkJoMIw-vh5z8UaT2No4or_-eXXpsd_l9s
+Terms of Use: https://docs.google.com/document/d/1-phaDjgy9yHOsrQla0WAErohJMma20An7zRo4rnr8Iw

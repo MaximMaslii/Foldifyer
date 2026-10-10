@@ -4,7 +4,7 @@
  "docs": {
   "privacy": {
    "title": "Foldifyer Privacy Policy",
-   "intro": "Foldifyer is a mobile app that turns a photo of a pet or a person into a printable paper toy template. This policy explains what data the app handles, why, and what choices you have. Foldifyer is operated by [YOUR FULL NAME], Chișinău, Republic of Moldova (\"we\", \"us\"). Contact: [YOUR SUPPORT EMAIL].",
+   "intro": "Foldifyer is a mobile app that turns a photo of a pet or a person into a printable paper toy template. This policy explains what data the app handles, why, and what choices you have. Foldifyer is operated by Maxim Maslii, Chișinău, Republic of Moldova (\"we\", \"us\"). Contact: maxim.maslii777@gmail.com.",
    "sections": [
     [
      "1. The short version",
@@ -24,7 +24,7 @@
       "The photo. When you make a figure, the app sends the photo you chose over an encrypted connection to our server, which passes it to our AI provider, Google (Gemini API), to (a) check that the photo is suitable and (b) draw the printed surfaces of the paper toy. Our server holds the photo in memory for the duration of that request and does not write it to storage.",
       "Figures. The picture generated for each figure (a stylised face and surface textures), a few colour values, the name you typed, the chosen outfit and difficulty. Kept until you delete the figure or all data.",
       "Photos of finished toys. If you photograph your assembled toy to share it, that photo stays on your phone and goes only where you choose to share it. It is not sent to us.",
-      "Purchases. Payments are processed by Apple or Google. We receive from our purchase provider (RevenueCat) only which products your device identifier bought and whether the subscription is active. We never see your card or billing details.",
+      "Purchases. Payments are processed by Apple or Google. We receive from our purchase provider (RevenueCat) only which products your device identifier bought. We never see your card or billing details.",
       "Technical data. Our hosting provider and server process your IP address and standard request information to deliver the service and to limit abuse. We do not use it to identify you or to build a profile."
      ]
     ],
@@ -45,7 +45,7 @@
       "To provide the service you ask for — making, storing and showing your figures (performance of a contract, GDPR Art. 6(1)(b)).",
       "Photos of people: we ask for your explicit consent in the app before a photo is sent for processing (GDPR Art. 6(1)(a)). You can withdraw it at any time by deleting the figure.",
       "To keep the service safe and lawful — checking that a photo is suitable, rate limiting, preventing misuse (legitimate interests, GDPR Art. 6(1)(f), and legal obligations).",
-      "To manage purchases and the free figure (performance of a contract)."
+      "To manage purchases and the free figures (performance of a contract)."
      ]
     ],
     [
@@ -57,7 +57,7 @@
        "Railway (United States) — application hosting.",
        "MongoDB Atlas — database for your device record and figures.",
        "Cloudflare R2 — storage of generated pictures (when enabled).",
-       "RevenueCat, Apple and Google — purchases and subscription status."
+       "RevenueCat, Apple and Google — purchases."
       ],
       "These providers may process data outside your country, including in the United States. Where required, transfers rely on the European Commission's Standard Contractual Clauses or an equivalent mechanism. We may disclose data if the law requires it."
      ]
@@ -103,14 +103,14 @@
     [
      "11. Contact",
      [
-      "[YOUR FULL NAME], Chișinău, Republic of Moldova. Email: [YOUR SUPPORT EMAIL]"
+      "Maxim Maslii, Chișinău, Republic of Moldova. Email: maxim.maslii777@gmail.com"
      ]
     ]
    ]
   },
   "terms": {
    "title": "Foldifyer Terms of Use",
-   "intro": "These terms are an agreement between you and [YOUR FULL NAME], Chișinău, Republic of Moldova (\"we\", \"us\") for the Foldifyer mobile app. By using the app you accept them. If you do not agree, do not use the app.",
+   "intro": "These terms are an agreement between you and Maxim Maslii, Chișinău, Republic of Moldova (\"we\", \"us\") for the Foldifyer mobile app. By using the app you accept them. If you do not agree, do not use the app.",
    "sections": [
     [
      "1. What Foldifyer is",
@@ -146,18 +146,17 @@
      ]
     ],
     [
-     "5. Free figure, packs and the Foldifyer Club",
+     "5. Free figures and figure packs",
      [
-      "A new user can make one figure for free; its printed sheet carries the app's name. Further figures need a pack or the Club.",
+      "A new user can make 2 figures for free. Free figures print with the app's name, and outfits, stickers, gift boxes, little houses and scenes stay locked.",
       [
-       "Packs (for example 3 or 10 figures) are one-time purchases. Figures from a pack do not expire. A figure that fails to generate is not counted.",
-       "The Foldifyer Club is a subscription (US$3.99 per month or US$24.99 per year). While it is active it includes a number of new figures each calendar month (shown in the app; unused ones do not carry over), the monthly collection of outfits, stickers and a scene, all stickers, gift boxes and houses.",
+       "Figure packs are one-time purchases (5 figures for US$2.99, 10 figures for US$4.99). There is no subscription and nothing renews.",
+       "Buying any pack adds its figures to your device and permanently unlocks all outfits, stickers, gift boxes, little houses and scenes, including ones added later, for every figure you make.",
+       "Figures from a pack do not expire. A figure that fails to generate is not counted.",
        "Prices can differ by country and include applicable taxes; the price shown in the app at the time of purchase applies. Payment is charged to your Apple ID or Google Play account when you confirm the purchase.",
-       "The subscription renews automatically for the same period and price unless you cancel at least 24 hours before the end of the current period. You can manage or cancel it at any time in your App Store or Google Play account settings. Deleting the app does not cancel a subscription.",
-       "After cancelling you keep the Club until the end of the period already paid for. Figures you have made stay yours; Club outfits and stickers can no longer be changed on them after the Club ends.",
        "Purchases are linked to the app installation on your device and can be restored with “Restore purchases”. Refunds are handled by Apple or Google under their policies; statutory consumer rights are not affected."
       ],
-      "We may change prices for future periods; you will be told in advance by the store and can cancel before the change applies."
+      "We may change prices for future purchases. Purchases you have already made are not affected."
      ]
     ],
     [
@@ -169,7 +168,7 @@
     [
      "7. Availability and changes",
      [
-      "We try to keep the service running but do not promise it will always be available or error-free. We may change or discontinue features. If we discontinue the paid service, unused paid figures or the unused part of a subscription will be refunded where the law requires it."
+      "We try to keep the service running but do not promise it will always be available or error-free. We may change or discontinue features. If we discontinue the paid service, unused paid figures will be refunded where the law requires it."
      ]
     ],
     [
@@ -205,7 +204,7 @@
     [
      "13. Contact",
      [
-      "[YOUR FULL NAME], Chișinău, Republic of Moldova. Email: [YOUR SUPPORT EMAIL]"
+      "Maxim Maslii, Chișinău, Republic of Moldova. Email: maxim.maslii777@gmail.com"
      ]
     ]
    ]
@@ -235,13 +234,13 @@
     [
      "If you no longer have the app",
      [
-      "Email [YOUR SUPPORT EMAIL] and ask for deletion. If you still know your device identifier (shown in More), include it. Records of devices that have not been used for 24 months are deleted automatically."
+      "Email maxim.maslii777@gmail.com and ask for deletion. If you still know your device identifier (shown in More), include it. Records of devices that have not been used for 24 months are deleted automatically."
      ]
     ],
     [
      "What may be kept",
      [
-      "A record of how many figures the device has used and bought (so the free figure cannot be refilled). Our AI provider may hold request data for a limited period (up to 55 days) for abuse monitoring before deleting it."
+      "A record of how many figures the device has used and bought (so the free figures cannot be refilled). Our AI provider may hold request data for a limited period (up to 55 days) for abuse monitoring before deleting it."
      ]
     ]
    ]

@@ -1,0 +1,10 @@
+Bundle ID: com.maslii.foldifyer
+Apple ID: 6821278167
+Subscription ID: com.foldifyer.10pics
+		 com.foldifyer.5pics
+
+RevenueCat Key: appl_DGwSKsUUKtqDQNneFOxqHQqEcVj  (3e655858852188cbcb0bc7de863f059f295d3fce311e9e3873c3f8423e1e8261)
+Entitlement: Pro
+
+Privacy Policy: https://docs.google.com/document/d/1PHBUwHeVwRkJoMIw-vh5z8UaT2No4or_-eXXpsd_l9s
+Terms of Use: https://docs.google.com/document/d/1-phaDjgy9yHOsrQla0WAErohJMma20An7zRo4rnr8Iw

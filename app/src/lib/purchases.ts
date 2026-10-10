@@ -2,7 +2,9 @@
 import { Platform } from "react-native";
 import Purchases, { type PurchasesPackage } from "react-native-purchases";
 
-const KEY = Platform.select({ ios: process.env.EXPO_PUBLIC_RC_IOS_KEY, android: process.env.EXPO_PUBLIC_RC_ANDROID_KEY }) || "";
+const RAW = Platform.select({ ios: process.env.EXPO_PUBLIC_RC_IOS_KEY, android: process.env.EXPO_PUBLIC_RC_ANDROID_KEY }) || "";
+/** A placeholder left in eas.json ("..._PASTE_...") counts as no key: purchases stay off instead of failing. */
+const KEY = RAW.includes("PASTE") ? "" : RAW;
 let configured = false;
 
 export function configurePurchases(deviceId: string) {
@@ -17,13 +19,17 @@ export function configurePurchases(deviceId: string) {
 
 export const purchasesReady = () => configured;
 
-export type Offer = { pack3: PurchasesPackage | null; pack10: PurchasesPackage | null; month: PurchasesPackage | null; year: PurchasesPackage | null };
-/** The current RevenueCat offering: the Club (monthly and annual, entitlement "club") and two one-time packs (foldifyer_pack3, foldifyer_pack10). */
+export type Offer = { pack5: PurchasesPackage | null; pack10: PurchasesPackage | null };
+/** How many figures a store product gives: com.foldifyer.5pics → 5, com.foldifyer.10pics → 10 (also foldifyer_pack5 / _pack10). */
+const size = (id: string) => Number(/(\d+)\s*pics|pack(\d+)/i.exec(id)?.slice(1).find(Boolean) ?? 0);
+/** The current RevenueCat offering: two one-time packs (consumables com.foldifyer.5pics and com.foldifyer.10pics). Any pack unlocks everything. */
 export async function offers(): Promise<Offer> {
-  if (!configured) return { pack3: null, pack10: null, month: null, year: null };
-  const cur = (await Purchases.getOfferings()).current;
-  const by = (id: string) => cur?.availablePackages.find((p) => p.product.identifier.startsWith(id)) ?? null;
-  return { pack3: by("foldifyer_pack3"), pack10: by("foldifyer_pack10"), month: cur?.monthly ?? by("foldifyer_club_month"), year: cur?.annual ?? by("foldifyer_club_year") };
+  if (!configured) return { pack5: null, pack10: null };
+  // Looks in every offering (the current one first), so the two packs can sit in one offering or in two separate ones.
+  const all = await Purchases.getOfferings();
+  const pkgs = [...(all.current?.availablePackages ?? []), ...Object.values(all.all).flatMap((o) => o.availablePackages)];
+  const by = (n: number) => pkgs.find((p) => size(p.product.identifier) === n) ?? null;
+  return { pack5: by(5), pack10: by(10) };
 }
 
 /** true when the purchase went through (the server then counts packs and checks Plus). */
